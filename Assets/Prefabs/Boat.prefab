@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9105278143615974769
 Transform:
   m_ObjectHideFlags: 0
@@ -40,7 +40,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8113653462123899727}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 9
@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 4462200380451614250}
   - component: {fileID: 1621382308450700178}
   - component: {fileID: 2784367764993288826}
+  - component: {fileID: 4095729080078408233}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Boat
@@ -85,7 +86,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8773015827127742609}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -105,8 +106,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.84, y: 2.1, z: 3.15}
-  m_Center: {x: 0, y: 0.88, z: 0}
+  m_Size: {x: 3, y: 2, z: 3}
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!54 &1621382308450700178
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -121,7 +122,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &2784367764993288826
 MonoBehaviour:
@@ -135,14 +136,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac962a5b50ed44584b65086c49fa5d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weights:
-  - tag: 
-    weight: 0
-  - tag: 
-    weight: 0
-  - tag: 
-    weight: 0
-  speed: 10
+  _rayRadius: 90
+  Sight: 60
+  BoxWeight: 0.4
+  DistanceFactor: 1.3
+  EnemyWeight: 0
+  EnemyDistanceFactor: 0
+  MovingSpeed: 5
+  SearchingSpeed: 3
+--- !u!75 &4095729080078408233
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8773015827127742609}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!1 &8773015827127742611
 GameObject:
   m_ObjectHideFlags: 0

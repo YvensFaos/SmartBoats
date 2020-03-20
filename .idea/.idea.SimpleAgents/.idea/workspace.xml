@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ce73c28-b335-442b-9b85-5a825d4262a4" name="Default Changelist" comment="" />
+    <list default="true" id="5ce73c28-b335-442b-9b85-5a825d4262a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TagWeight.cs" root0="FORCE_HIGHLIGHTING" />
@@ -13,6 +20,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96C9BAFF-A941-4FE5-B4EB-911E74F8F90E/22/43744954/Bounds.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SenseLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -25,6 +34,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TagWeight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SenseLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" />
       </list>
     </option>
   </component>
@@ -81,5 +92,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1584649889894" />
+    <state x="503" y="248" width="672" height="678" key="search.everywhere.popup" timestamp="1584689391234">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="503" y="248" width="672" height="678" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1584689391234" />
   </component>
 </project>
