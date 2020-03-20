@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
+using Random = UnityEngine.Random;
 
 [ExecuteInEditMode]
 public class GenerateObjectsInArea : MonoBehaviour
@@ -13,24 +11,35 @@ public class GenerateObjectsInArea : MonoBehaviour
     [SerializeField]
     private GameObject gameObjectToBeCreated;
 
+    [Space(10)]
+    [SerializeField]
+    private Vector3 randomRotationMinimal;
+    [SerializeField]
+    private Vector3 randomRotationMaximal;
+
     private void Awake()
     {
         _bounds = GetComponent<Renderer>().bounds;
     }
 
-    void Start()
+    public void RemoveChildren()
     {
-        if (!Application.isPlaying)
+        for (int i = transform.childCount - 1; i >= 0; --i)
         {
-            for (uint i = 0; i < transform.childCount; i++)
-            {
-                DestroyImmediate(transform.GetChild((int)i).gameObject);
-            }
-            for (uint i = 0; i < count; i++)
-            {
-                GameObject created = Instantiate(gameObjectToBeCreated, GetRandomPositionInWorldBounds(), Quaternion.Euler(Random.Range(-20.0f, 20.0f), Random.Range(-89.0f, 89.0f), Random.Range(-10.0f, -10.0f)));
-                created.transform.parent = transform;
-            }
+            DestroyImmediate(transform.GetChild(i).gameObject);
+        }
+    }
+    
+    public void RegenerateObjects()
+    {
+        for (int i = transform.childCount - 1; i >= 0; --i)
+        {
+            DestroyImmediate(transform.GetChild(i).gameObject);
+        }
+        for (uint i = 0; i < count; i++)
+        {
+            GameObject created = Instantiate(gameObjectToBeCreated, GetRandomPositionInWorldBounds(), GetRandomRotation());
+            created.transform.parent = transform;
         }
     }
     
@@ -43,5 +52,12 @@ public class GenerateObjectsInArea : MonoBehaviour
             Random.Range(-extents.y, extents.y) + center.y,
             Random.Range(-extents.z, extents.z) + center.z
         );
+    }
+
+    private Quaternion GetRandomRotation()
+    {
+        return Quaternion.Euler(Random.Range(randomRotationMinimal.x, randomRotationMaximal.x),
+            Random.Range(randomRotationMinimal.y, randomRotationMaximal.y),
+            Random.Range(randomRotationMinimal.z, randomRotationMaximal.z));
     }
 }

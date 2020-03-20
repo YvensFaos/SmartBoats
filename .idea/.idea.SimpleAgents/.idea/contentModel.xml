@@ -20,14 +20,12 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AgentLogic.cs" t="Include" />
           <e p="BoatLogic.cs" t="Include" />
           <e p="FollowObject.cs" t="Include" />
-          <e p="GameLogic.cs" t="Include" />
           <e p="GenerateObjectsEditor.cs" t="Include" />
           <e p="GenerateObjectsInArea.cs" t="Include" />
-          <e p="SenseLogic.cs" t="Include" />
-          <e p="TagWeight.cs" t="Include" />
-          <e p="TagWeightHelper.cs" t="Include" />
+          <e p="PirateLogic.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

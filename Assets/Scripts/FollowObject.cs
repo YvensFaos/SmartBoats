@@ -12,6 +12,9 @@ public class FollowObject : MonoBehaviour
 
    private void Update()
    {
-      transform.position = Vector3.Lerp(transform.position, followThis.transform.position, easing);
+      if (followThis != null)
+      {
+         transform.position = Vector3.Lerp(transform.position, followThis.transform.position, easing);   
+      }
    }
 }
