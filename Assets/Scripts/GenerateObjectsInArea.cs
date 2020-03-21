@@ -10,7 +10,7 @@ public class GenerateObjectsInArea : MonoBehaviour
     [SerializeField]
     private uint count;
     [SerializeField]
-    private GameObject gameObjectToBeCreated;
+    private GameObject[] gameObjectToBeCreated;
 
     [Space(10)]
     [SerializeField]
@@ -41,7 +41,7 @@ public class GenerateObjectsInArea : MonoBehaviour
         List<GameObject> newObjects = new List<GameObject>();
         for (uint i = 0; i < count; i++)
         {
-            GameObject created = Instantiate(gameObjectToBeCreated, GetRandomPositionInWorldBounds(), GetRandomRotation());
+            GameObject created = Instantiate(gameObjectToBeCreated[Random.Range(0, gameObjectToBeCreated.Length)], GetRandomPositionInWorldBounds(), GetRandomRotation());
             created.transform.parent = transform;
             newObjects.Add(created);
         }

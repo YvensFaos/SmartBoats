@@ -2,6 +2,7 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+[Serializable]
 public struct AgentData
 {
     public int _steps;

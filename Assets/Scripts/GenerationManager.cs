@@ -35,6 +35,11 @@ public class GenerationManager : MonoBehaviour
     
     private bool _runningSimulation;
 
+    [SerializeField]
+    private AgentData _lastBoatWinner;
+    [SerializeField]
+    private AgentData _lastPirateWinner;
+
     private void Start()
     {
         if (runOnStart)
@@ -112,6 +117,8 @@ public class GenerationManager : MonoBehaviour
         {
             boatParents[i] = _activeBoats[i];
         }
+
+        _lastBoatWinner = _activeBoats[0].GetData();
         
         _activePirates.RemoveAll(item => item == null);
         _activePirates.Sort();
@@ -120,6 +127,8 @@ public class GenerationManager : MonoBehaviour
         {
             pirateParents[i] = _activePirates[i];
         }
+
+        _lastPirateWinner = _activePirates[0].GetData();
         
         //Winners:
         Debug.Log("Last winner boat had: " + _activeBoats[0].GetPoints() + " points!" + " Last winner pirate had: " + _activePirates[0].GetPoints() + " points!");

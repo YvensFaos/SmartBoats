@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5ce73c28-b335-442b-9b85-5a825d4262a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96C9BAFF-A941-4FE5-B4EB-911E74F8F90E/22/43744954/Bounds.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96C9BAFF-A941-4FE5-B4EB-911E74F8F90E/0d/c8efcfd2/Random.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -38,8 +39,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PirateLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" />
       </list>
