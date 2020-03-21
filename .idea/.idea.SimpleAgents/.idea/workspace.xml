@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce73c28-b335-442b-9b85-5a825d4262a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +38,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" />
       </list>
     </option>
   </component>

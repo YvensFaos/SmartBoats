@@ -14,32 +14,30 @@ public class GenerationManager : MonoBehaviour
     private GenerateObjectsInArea pirateGenerator;
 
     [Space(10)]
-    // [SerializeField]
-    private List<BoatLogic> activeBoats;
-    // [SerializeField]
-    private List<PirateLogic> activePirates;
+    private List<BoatLogic> _activeBoats;
+    private List<PirateLogic> _activePirates;
 
     [Space(10)] 
     [SerializeField]
-    private float MutationFactor;
+    private float mutationFactor;
     [SerializeField] 
-    private float MutationChance;
+    private float mutationChance;
     [SerializeField] 
-    private int ParentSize;
+    private int parentSize;
 
     [Space(10)] 
     [SerializeField]
-    private float SimulationTimer;
+    private float simulationTimer;
     [SerializeField]
-    private float SimulationCount;
+    private float simulationCount;
     [SerializeField]
-    private bool RunOnStart;
+    private bool runOnStart;
     
     private bool _runningSimulation;
 
     private void Start()
     {
-        if (RunOnStart)
+        if (runOnStart)
         {
             StartSimulation();
         }
@@ -49,12 +47,12 @@ public class GenerationManager : MonoBehaviour
     {
         if (_runningSimulation)
         {
-            if (SimulationCount >= SimulationTimer)
+            if (simulationCount >= simulationTimer)
             {
                 MakeNewGeneration();
-                SimulationCount = -Time.deltaTime;
+                simulationCount = -Time.deltaTime;
             } 
-            SimulationCount += Time.deltaTime;
+            simulationCount += Time.deltaTime;
         }
     }
 
@@ -65,37 +63,39 @@ public class GenerationManager : MonoBehaviour
     
     public void GenerateObjects(BoatLogic[] boatParents = null, PirateLogic[] pirateParents = null)
     {
-        activeBoats = new List<BoatLogic>();
+        _activeBoats = new List<BoatLogic>();
         List<GameObject> objects = boatGenerator.RegenerateObjects();
         foreach (GameObject obj in objects)
         {
             BoatLogic boat = obj.GetComponent<BoatLogic>();
             if (boat != null)
             {
-                activeBoats.Add(boat);
+                _activeBoats.Add(boat);
                 if (boatParents != null)
                 {
                     BoatLogic boatParent = boatParents[Random.Range(0, boatParents.Length - 1)];
                     boat.Birth(boatParent.GetData());
                 }
-                boat.Mutate(MutationFactor, MutationChance);
+                boat.Mutate(mutationFactor, mutationChance);
+                boat.AwakeUp();
             }
         }
 
-        activePirates = new List<PirateLogic>();
+        _activePirates = new List<PirateLogic>();
         objects = pirateGenerator.RegenerateObjects();
         foreach (GameObject obj in objects)
         {
             PirateLogic pirate = obj.GetComponent<PirateLogic>();
             if (pirate != null)
             {
-                activePirates.Add(pirate);
+                _activePirates.Add(pirate);
                 if (pirateParents != null)
                 {
                     PirateLogic pirateParent = pirateParents[Random.Range(0, pirateParents.Length - 1)];
                     pirate.Birth(pirateParent.GetData());
                 }
-                pirate.Mutate(MutationFactor, MutationChance);
+                pirate.Mutate(mutationFactor, mutationChance);
+                pirate.AwakeUp();
             }
         }
     }
@@ -105,24 +105,24 @@ public class GenerationManager : MonoBehaviour
         GenerateBoxes();
         
         //Fetch parents
-        activeBoats.RemoveAll(item => item == null);
-        activeBoats.Sort();
-        BoatLogic[] boatParents = new BoatLogic[ParentSize];
-        for (int i = 0; i < ParentSize; i++)
+        _activeBoats.RemoveAll(item => item == null);
+        _activeBoats.Sort();
+        BoatLogic[] boatParents = new BoatLogic[parentSize];
+        for (int i = 0; i < parentSize; i++)
         {
-            boatParents[i] = activeBoats[i];
+            boatParents[i] = _activeBoats[i];
         }
         
-        activePirates.RemoveAll(item => item == null);
-        activePirates.Sort();
-        PirateLogic[] pirateParents = new PirateLogic[ParentSize];
-        for (int i = 0; i < ParentSize; i++)
+        _activePirates.RemoveAll(item => item == null);
+        _activePirates.Sort();
+        PirateLogic[] pirateParents = new PirateLogic[parentSize];
+        for (int i = 0; i < parentSize; i++)
         {
-            pirateParents[i] = activePirates[i];
+            pirateParents[i] = _activePirates[i];
         }
         
         //Winners:
-        Debug.Log("Last winner boat had: " + activeBoats[0].GetPoints() + " points!" + " Last winner pirate had: " + activePirates[0].GetPoints() + " points!");
+        Debug.Log("Last winner boat had: " + _activeBoats[0].GetPoints() + " points!" + " Last winner pirate had: " + _activePirates[0].GetPoints() + " points!");
         
         GenerateObjects(boatParents, pirateParents);
     }
@@ -137,5 +137,7 @@ public class GenerationManager : MonoBehaviour
     public void StopSimulation()
     {
         _runningSimulation = false;
+        _activeBoats.ForEach(boat => boat.Sleep());
+        _activePirates.ForEach(pirate => pirate.Sleep());
     }
 }

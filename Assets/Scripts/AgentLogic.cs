@@ -41,6 +41,8 @@ public class AgentLogic : MonoBehaviour, IComparable
     
     protected float points;
 
+    private bool _isAwake;
+
     [Header("Genes")]
     [SerializeField, Range(0.0f, 360.0f)]
     private int _rayRadius = 16;
@@ -162,11 +164,19 @@ public class AgentLogic : MonoBehaviour, IComparable
 
     private void Update()
     {
+        if (_isAwake)
+        {
+            Act();    
+        }
+    }
+
+    private void Act()
+    {
         Transform selfTransform = transform;
         Vector3 forward = Vector3.forward;
         Vector3 rayDirection = forward;
         Vector3 selfPosition = selfTransform.position;
-        
+
         Vector3 highestDirection = forward;
         float highestValue = float.MinValue;
         for (int i = 0; i <= _rayRadius; i++)
@@ -175,7 +185,7 @@ public class AgentLogic : MonoBehaviour, IComparable
             {
                 Debug.DrawRay(selfPosition, rayDirection * Sight, visionColor);
             }
-    
+
             float value = Random.Range(RandomDirectionValue.x, RandomDirectionValue.y);
             if (Physics.Raycast(selfPosition, rayDirection, out var raycastHit, Sight))
             {
@@ -183,42 +193,57 @@ public class AgentLogic : MonoBehaviour, IComparable
                 {
                     Debug.DrawLine(selfPosition, raycastHit.point, foundColor);
                 }
-                    
+
                 float distance = raycastHit.distance;
                 float distanceIndex = 1.0f - distance / Sight;
                 string type = raycastHit.collider.gameObject.tag;
-        
+
                 switch (type)
                 {
-                    case "Box": value = distanceIndex * DistanceFactor + BoxWeight;
+                    case "Box":
+                        value = distanceIndex * DistanceFactor + BoxWeight;
                         break;
-                    case "Boat": value = distance * BoatDistanceFactor + BoatWeight;
+                    case "Boat":
+                        value = distance * BoatDistanceFactor + BoatWeight;
                         break;
-                    case "Enemy": value = distance * EnemyDistanceFactor + EnemyWeight;
+                    case "Enemy":
+                        value = distance * EnemyDistanceFactor + EnemyWeight;
                         break;
                 }
             }
+
             if (value > highestValue)
             {
                 highestValue = value;
                 highestDirection = new Vector3(rayDirection.x, 0.0f, rayDirection.z);
             }
-            
+
             rayDirection = Quaternion.Euler(0, _steps, 0) * rayDirection;
         }
-        
+
         if (Mathf.Abs(highestValue - float.MinValue) > 0.0005f)
         {
             transform.rotation = Quaternion.LookRotation(highestDirection);
             _rigidbody.velocity = highestDirection * MovingSpeed;
-            
+
             if (debug)
             {
                 Debug.DrawRay(selfPosition, highestDirection * (Sight * 1.5f), directionColor);
             }
         }
     }
-    
+
+    public void AwakeUp()
+    {
+        _isAwake = true;
+    }
+
+    public void Sleep()
+    {
+        _isAwake = false;
+        _rigidbody.velocity = Vector3.zero;
+    }
+
     public float GetPoints()
     {
         return points;
