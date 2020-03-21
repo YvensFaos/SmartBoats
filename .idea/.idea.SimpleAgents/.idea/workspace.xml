@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce73c28-b335-442b-9b85-5a825d4262a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DefaultScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DefaultScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SenseLogic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SenseLogic.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TagWeight.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TagWeight.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TagWeightHelper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TagWeightHelper.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,14 +21,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96C9BAFF-A941-4FE5-B4EB-911E74F8F90E/22/43744954/Bounds.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PirateLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96C9BAFF-A941-4FE5-B4EB-911E74F8F90E/22/43744954/Bounds.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -44,12 +39,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TagWeight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SenseLogic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PirateLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" />
       </list>
     </option>
   </component>
@@ -98,10 +95,15 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="WindowStateProjectService">
-    <state x="469" y="172" width="741" height="729" key="find.popup" timestamp="1584611343914">
+    <state x="498" y="234" key="RiderGenerateDialog" timestamp="1584741384750">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="498" y="234" key="RiderGenerateDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1584741384750" />
+    <state x="469" y="172" width="741" height="729" key="find.popup" timestamp="1584741600191">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="469" y="172" width="741" height="729" key="find.popup/-1302.113.1302.937/0.23.1680.1027@0.23.1680.1027" timestamp="1584611343914" />
+    <state x="469" y="172" width="741" height="729" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1584741600191" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1584701557374">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

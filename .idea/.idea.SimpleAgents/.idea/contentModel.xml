@@ -25,6 +25,8 @@
           <e p="FollowObject.cs" t="Include" />
           <e p="GenerateObjectsEditor.cs" t="Include" />
           <e p="GenerateObjectsInArea.cs" t="Include" />
+          <e p="GenerationManager.cs" t="Include" />
+          <e p="GenerationManagerEditor.cs" t="Include" />
           <e p="PirateLogic.cs" t="Include" />
         </e>
       </e>

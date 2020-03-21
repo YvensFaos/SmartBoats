@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Random = UnityEngine.Random;
+using System.Collections.Generic;
 
 [ExecuteInEditMode]
 public class GenerateObjectsInArea : MonoBehaviour
@@ -30,17 +31,22 @@ public class GenerateObjectsInArea : MonoBehaviour
         }
     }
     
-    public void RegenerateObjects()
+    public List<GameObject> RegenerateObjects()
     {
         for (int i = transform.childCount - 1; i >= 0; --i)
         {
             DestroyImmediate(transform.GetChild(i).gameObject);
         }
+        
+        List<GameObject> newObjects = new List<GameObject>();
         for (uint i = 0; i < count; i++)
         {
             GameObject created = Instantiate(gameObjectToBeCreated, GetRandomPositionInWorldBounds(), GetRandomRotation());
             created.transform.parent = transform;
+            newObjects.Add(created);
         }
+
+        return newObjects;
     }
     
     private Vector3 GetRandomPositionInWorldBounds()

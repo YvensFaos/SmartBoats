@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-using UnityEngine;
-using UnityEditor;
-
 [CustomEditor(typeof(GenerateObjectsInArea))]
 [CanEditMultipleObjects]
 public class GenerateObjectsEditor : Editor
