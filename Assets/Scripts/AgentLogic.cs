@@ -173,12 +173,17 @@ public class AgentLogic : MonoBehaviour, IComparable
     private void Act()
     {
         Transform selfTransform = transform;
-        Vector3 forward = Vector3.forward;
+        Vector3 forward = selfTransform.forward;
+        forward.y = 0.0f;
+        forward.Normalize();
         Vector3 rayDirection = forward;
         Vector3 selfPosition = selfTransform.position;
 
         Vector3 highestDirection = forward;
         float highestValue = float.MinValue;
+        
+        rayDirection = Quaternion.Euler(0, -1.0f * _steps * (_rayRadius / 2.0f), 0) * rayDirection;
+        
         for (int i = 0; i <= _rayRadius; i++)
         {
             if (debug)

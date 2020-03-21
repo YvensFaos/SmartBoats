@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5ce73c28-b335-442b-9b85-5a825d4262a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
