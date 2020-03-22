@@ -3,8 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="5ce73c28-b335-442b-9b85-5a825d4262a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pirate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Pirate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat1st.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat1st.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat2nd.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat2nd.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate1st.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate1st.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate2nd.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate2nd.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,13 +45,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TagWeight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SenseLogic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PirateLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" />
       </list>
     </option>
@@ -63,10 +73,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5802">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="5802" />
       <method v="2" />
     </configuration>
   </component>
@@ -91,6 +101,22 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="WindowStateProjectService">
+    <state width="1638" height="345" key="GridCell.Tab.0.bottom" timestamp="1584820613350">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="345" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1584820613350" />
+    <state width="1638" height="345" key="GridCell.Tab.0.center" timestamp="1584820613349">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="345" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1584820613349" />
+    <state width="1638" height="345" key="GridCell.Tab.0.left" timestamp="1584820613345">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="345" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1584820613345" />
+    <state width="1638" height="345" key="GridCell.Tab.0.right" timestamp="1584820613350">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="345" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1584820613350" />
     <state x="498" y="234" key="RiderGenerateDialog" timestamp="1584741384750">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

@@ -12,4 +12,12 @@ public class BoatLogic : AgentLogic
             Destroy(other.gameObject);
         }
     }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag.Equals("Enemy"))
+        {
+            points -= 100.0f;
+        }
+    }
 }

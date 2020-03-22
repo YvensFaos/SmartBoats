@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -23,7 +24,12 @@ public class GenerationManager : MonoBehaviour
     [SerializeField] 
     private float mutationChance;
     [SerializeField] 
-    private int parentSize;
+    private int boatParentSize;
+    [SerializeField] 
+    private int pirateParentSize;
+
+    private BoatLogic[] _boatParents;
+    private PirateLogic[] _pirateParents;
 
     [Space(10)] 
     [SerializeField]
@@ -36,14 +42,20 @@ public class GenerationManager : MonoBehaviour
     private bool _runningSimulation;
 
     [SerializeField]
-    private AgentData _lastBoatWinner;
+    private int generationCount;
     [SerializeField]
-    private AgentData _lastPirateWinner;
+    private string savePrefabsAt;
+    
+    [SerializeField]
+    private AgentData lastBoatWinnerData;
+    [SerializeField]
+    private AgentData lastPirateWinnerData;
 
     private void Start()
     {
         if (runOnStart)
         {
+            generationCount = 1;
             StartSimulation();
         }
     }
@@ -54,6 +66,7 @@ public class GenerationManager : MonoBehaviour
         {
             if (simulationCount >= simulationTimer)
             {
+                ++generationCount;
                 MakeNewGeneration();
                 simulationCount = -Time.deltaTime;
             } 
@@ -68,24 +81,13 @@ public class GenerationManager : MonoBehaviour
     
     public void GenerateObjects(BoatLogic[] boatParents = null, PirateLogic[] pirateParents = null)
     {
-        _activeBoats = new List<BoatLogic>();
-        List<GameObject> objects = boatGenerator.RegenerateObjects();
-        foreach (GameObject obj in objects)
-        {
-            BoatLogic boat = obj.GetComponent<BoatLogic>();
-            if (boat != null)
-            {
-                _activeBoats.Add(boat);
-                if (boatParents != null)
-                {
-                    BoatLogic boatParent = boatParents[Random.Range(0, boatParents.Length - 1)];
-                    boat.Birth(boatParent.GetData());
-                }
-                boat.Mutate(mutationFactor, mutationChance);
-                boat.AwakeUp();
-            }
-        }
+        GenerateBoats(boatParents);
+        GeneratePirates(pirateParents);
+    }
 
+    private void GeneratePirates(PirateLogic[] pirateParents)
+    {
+        List<GameObject> objects;
         _activePirates = new List<PirateLogic>();
         objects = pirateGenerator.RegenerateObjects();
         foreach (GameObject obj in objects)
@@ -99,8 +101,31 @@ public class GenerationManager : MonoBehaviour
                     PirateLogic pirateParent = pirateParents[Random.Range(0, pirateParents.Length - 1)];
                     pirate.Birth(pirateParent.GetData());
                 }
+
                 pirate.Mutate(mutationFactor, mutationChance);
                 pirate.AwakeUp();
+            }
+        }
+    }
+
+    private void GenerateBoats(BoatLogic[] boatParents)
+    {
+        _activeBoats = new List<BoatLogic>();
+        List<GameObject> objects = boatGenerator.RegenerateObjects();
+        foreach (GameObject obj in objects)
+        {
+            BoatLogic boat = obj.GetComponent<BoatLogic>();
+            if (boat != null)
+            {
+                _activeBoats.Add(boat);
+                if (boatParents != null)
+                {
+                    BoatLogic boatParent = boatParents[Random.Range(0, boatParents.Length - 1)];
+                    boat.Birth(boatParent.GetData());
+                }
+
+                boat.Mutate(mutationFactor, mutationChance);
+                boat.AwakeUp();
             }
         }
     }
@@ -112,28 +137,38 @@ public class GenerationManager : MonoBehaviour
         //Fetch parents
         _activeBoats.RemoveAll(item => item == null);
         _activeBoats.Sort();
-        BoatLogic[] boatParents = new BoatLogic[parentSize];
-        for (int i = 0; i < parentSize; i++)
+        if (_activeBoats.Count == 0)
         {
-            boatParents[i] = _activeBoats[i];
+            GenerateBoats(_boatParents);
+        }
+        _boatParents = new BoatLogic[boatParentSize];
+        for (int i = 0; i < boatParentSize; i++)
+        {
+            _boatParents[i] = _activeBoats[i];
         }
 
-        _lastBoatWinner = _activeBoats[0].GetData();
+        BoatLogic lastBoatWinner = _activeBoats[0];
+        lastBoatWinner.name += "Gen-" + generationCount; 
+        lastBoatWinnerData = lastBoatWinner.GetData();
+        PrefabUtility.SaveAsPrefabAsset(lastBoatWinner.gameObject, savePrefabsAt + lastBoatWinner.name + ".prefab");
         
         _activePirates.RemoveAll(item => item == null);
         _activePirates.Sort();
-        PirateLogic[] pirateParents = new PirateLogic[parentSize];
-        for (int i = 0; i < parentSize; i++)
+        _pirateParents = new PirateLogic[pirateParentSize];
+        for (int i = 0; i < pirateParentSize; i++)
         {
-            pirateParents[i] = _activePirates[i];
+            _pirateParents[i] = _activePirates[i];
         }
 
-        _lastPirateWinner = _activePirates[0].GetData();
+        PirateLogic lastPirateWinner = _activePirates[0];
+        lastPirateWinner.name += "Gen-" + generationCount; 
+        lastPirateWinnerData = lastPirateWinner.GetData();
+        PrefabUtility.SaveAsPrefabAsset(lastPirateWinner.gameObject, savePrefabsAt + lastPirateWinner.name + ".prefab");
         
         //Winners:
-        Debug.Log("Last winner boat had: " + _activeBoats[0].GetPoints() + " points!" + " Last winner pirate had: " + _activePirates[0].GetPoints() + " points!");
+        Debug.Log("Last winner boat had: " + lastBoatWinner.GetPoints() + " points!" + " Last winner pirate had: " + lastPirateWinner.GetPoints() + " points!");
         
-        GenerateObjects(boatParents, pirateParents);
+        GenerateObjects(_boatParents, _pirateParents);
     }
 
     public void StartSimulation()
@@ -146,6 +181,7 @@ public class GenerationManager : MonoBehaviour
     public void StopSimulation()
     {
         _runningSimulation = false;
+        _activeBoats.RemoveAll(item => item == null);
         _activeBoats.ForEach(boat => boat.Sleep());
         _activePirates.ForEach(pirate => pirate.Sleep());
     }
