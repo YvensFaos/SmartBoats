@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 public class GenerationManager : MonoBehaviour
 {
     [SerializeField]
-    private GenerateObjectsInArea boxGenerator;
+    private GenerateObjectsInArea[] boxGenerators;
     [SerializeField]
     private GenerateObjectsInArea boatGenerator;
     [SerializeField]
@@ -76,7 +76,10 @@ public class GenerationManager : MonoBehaviour
 
     public void GenerateBoxes()
     {
-        boxGenerator.RegenerateObjects();
+        foreach (GenerateObjectsInArea generateObjectsInArea in boxGenerators)
+        {
+            generateObjectsInArea.RegenerateObjects();
+        }
     }
     
     public void GenerateObjects(BoatLogic[] boatParents = null, PirateLogic[] pirateParents = null)
