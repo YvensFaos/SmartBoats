@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5ce73c28-b335-442b-9b85-5a825d4262a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LowPolyWater_Pack/Plane Meshes/Ocean50x50W750H750.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LowPolyWater_Pack/Plane Meshes/Ocean50x50W750H750.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DefaultScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DefaultScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Watercraft pack/Materials/Blue_metal.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Watercraft pack/Materials/Blue_metal.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Watercraft pack/Materials/Green_metal.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Watercraft pack/Materials/Green_metal.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Watercraft pack/Materials/Grey_metal_3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Watercraft pack/Materials/Grey_metal_3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Watercraft pack/Materials/Yellow_metal.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Watercraft pack/Materials/Yellow_metal.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
