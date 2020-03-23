@@ -2,7 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce73c28-b335-442b-9b85-5a825d4262a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAgents/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Boat(Clone)Gen-7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SavedGeneration/Pirate(Clone)Gen-7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DefaultScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DefaultScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PirateLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PirateLogic.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +35,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -32,14 +53,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TagWeight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SenseLogic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PirateLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PirateLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BoatLogic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenerateObjectsInArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenerationManagerEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AgentLogic.cs" />
       </list>
     </option>
   </component>
@@ -117,9 +138,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1584701557374" />
-    <state x="503" y="248" width="672" height="678" key="search.everywhere.popup" timestamp="1584689391234">
+    <state x="503" y="248" width="672" height="678" key="search.everywhere.popup" timestamp="1584952583267">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="503" y="248" width="672" height="678" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1584689391234" />
+    <state x="503" y="248" width="672" height="678" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1584952583267" />
   </component>
 </project>

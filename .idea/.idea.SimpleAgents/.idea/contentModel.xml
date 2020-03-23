@@ -22,7 +22,6 @@
         <e p="Scripts" t="Include">
           <e p="AgentLogic.cs" t="Include" />
           <e p="BoatLogic.cs" t="Include" />
-          <e p="FollowObject.cs" t="Include" />
           <e p="GenerateObjectsEditor.cs" t="Include" />
           <e p="GenerateObjectsInArea.cs" t="Include" />
           <e p="GenerationManager.cs" t="Include" />

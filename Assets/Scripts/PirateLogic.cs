@@ -4,11 +4,16 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(Rigidbody))]
 public class PirateLogic : AgentLogic
 {
+    #region Static Variables
+    private static float _boxPoints = 0.1f;
+    private static float _boatPoints = 5.0f;
+    #endregion
+    
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag.Equals("Box"))
         {
-            points += 0.1f;
+            points += _boxPoints;
             Destroy(other.gameObject);
         }
     }
@@ -17,7 +22,7 @@ public class PirateLogic : AgentLogic
     {
         if(other.gameObject.tag.Equals("Boat"))
         {
-            points += 5.0f;
+            points += _boatPoints;
             Destroy(other.gameObject);
         }
     }
