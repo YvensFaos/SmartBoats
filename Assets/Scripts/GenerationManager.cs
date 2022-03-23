@@ -56,7 +56,12 @@ public class GenerationManager : MonoBehaviour
     private List<PirateLogic> _activePirates;
     private BoatLogic[] _boatParents;
     private PirateLogic[] _pirateParents;
-    
+
+    private void Awake()
+    {
+        Random.InitState(6);
+    }
+
     private void Start()
     {
         if (runOnStart)
@@ -169,6 +174,8 @@ public class GenerationManager : MonoBehaviour
      /// </summary>
     public void MakeNewGeneration()
     {
+        Random.InitState(6);
+
         GenerateBoxes();
         
         //Fetch parents
@@ -214,6 +221,8 @@ public class GenerationManager : MonoBehaviour
      /// </summary>
     public void StartSimulation()
     {
+        Random.InitState(6);
+
         GenerateBoxes();
         GenerateObjects();
         _runningSimulation = true;
