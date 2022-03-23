@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="LowPolyWater_Pack" t="Include">
+          <e p="LowPoly Island" t="Include">
+            <e p="Credits.txt" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="GeneratePlane.cs" t="Include" />
+            </e>
+            <e p="LowPolyWater.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="WaterShaded.shader" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="AgentLogic.cs" t="Include" />
+          <e p="BoatLogic.cs" t="Include" />
+          <e p="GenerateObjectsEditor.cs" t="Include" />
+          <e p="GenerateObjectsInArea.cs" t="Include" />
+          <e p="GenerationManager.cs" t="Include" />
+          <e p="GenerationManagerEditor.cs" t="Include" />
+          <e p="PirateLogic.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="SmartBoats.sln" t="IncludeFlat" />
+      <e p="Temp/Bin" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_SmartBoats.545911295.00" t="ExcludeRecursive" />
+  </component>
+</project>
