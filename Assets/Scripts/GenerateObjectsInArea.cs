@@ -10,18 +10,16 @@ public class GenerateObjectsInArea : MonoBehaviour
 {
     private Bounds _bounds;
 
-    [Header("Objects")]
-    [SerializeField, Tooltip("Possible objecst to be created in the area.")]
+    [Header("Objects")] [SerializeField, Tooltip("Possible objects to be created in the area.")]
     private GameObject[] gameObjectToBeCreated;
+
     [SerializeField, Tooltip("Number of objects to be created.")]
     private uint count;
 
-    [Space(10)]
-    [Header("Variation")]
-    [SerializeField]
+    [Space(10)] [Header("Variation")] [SerializeField]
     private Vector3 randomRotationMinimal;
-    [SerializeField]
-    private Vector3 randomRotationMaximal;
+
+    [SerializeField] private Vector3 randomRotationMaximal;
 
     private void Awake()
     {
@@ -33,12 +31,12 @@ public class GenerateObjectsInArea : MonoBehaviour
     /// </summary>
     public void RemoveChildren()
     {
-        for (int i = transform.childCount - 1; i >= 0; --i)
+        for (var i = transform.childCount - 1; i >= 0; --i)
         {
             DestroyImmediate(transform.GetChild(i).gameObject);
         }
     }
-    
+
     /// <summary>
     /// Destroy all objects in the area (that belongs to this script) and creates them again.
     /// The list of newly created objects is returned.
@@ -46,37 +44,38 @@ public class GenerateObjectsInArea : MonoBehaviour
     /// <returns></returns>
     public List<GameObject> RegenerateObjects()
     {
-        for (int i = transform.childCount - 1; i >= 0; --i)
+        for (var i = transform.childCount - 1; i >= 0; --i)
         {
             DestroyImmediate(transform.GetChild(i).gameObject);
         }
-        
-        List<GameObject> newObjects = new List<GameObject>();
+
+        var newObjects = new List<GameObject>();
         for (uint i = 0; i < count; i++)
         {
-            GameObject created = Instantiate(gameObjectToBeCreated[Random.Range(0, gameObjectToBeCreated.Length)], GetRandomPositionInWorldBounds(), GetRandomRotation());
+            var created = Instantiate(gameObjectToBeCreated[Random.Range(0, gameObjectToBeCreated.Length)],
+                GetRandomPositionInWorldBounds(), GetRandomRotation());
             created.transform.parent = transform;
             newObjects.Add(created);
         }
 
         return newObjects;
     }
-    
+
     /// <summary>
     /// Gets a random position delimited by the bounds, using its extends and center.
     /// </summary>
     /// <returns>Returns a random position in the bounds of the area.</returns>
     private Vector3 GetRandomPositionInWorldBounds()
     {
-        Vector3 extents = _bounds.extents;
-        Vector3 center = _bounds.center;
+        var extents = _bounds.extents;
+        var center = _bounds.center;
         return new Vector3(
             Random.Range(-extents.x, extents.x) + center.x,
             Random.Range(-extents.y, extents.y) + center.y,
             Random.Range(-extents.z, extents.z) + center.z
         );
     }
-    
+
     /// <summary>
     /// Gets a random rotation (Quaternion) using the randomRotationMinimal and randomRotationMaximal.
     /// </summary>
