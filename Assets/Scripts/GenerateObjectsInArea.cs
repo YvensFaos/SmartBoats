@@ -8,23 +8,22 @@ using System.Collections.Generic;
 [ExecuteInEditMode]
 public class GenerateObjectsInArea : MonoBehaviour
 {
-    private Bounds _bounds;
 
-    [Header("Objects")] [SerializeField, Tooltip("Possible objects to be created in the area.")]
+    [Header("Objects")]
+    [SerializeField, Tooltip("Area to used where the objects will be created.")]
+    private BoxCollider area;
+    [SerializeField, Tooltip("Possible objects to be created in the area.")]
     private GameObject[] gameObjectToBeCreated;
 
     [SerializeField, Tooltip("Number of objects to be created.")]
     private uint count;
 
-    [Space(10)] [Header("Variation")] [SerializeField]
+    [Space(10)] 
+    [Header("Variation")] 
+    [SerializeField]
     private Vector3 randomRotationMinimal;
-
-    [SerializeField] private Vector3 randomRotationMaximal;
-
-    private void Awake()
-    {
-        _bounds = GetComponent<Renderer>().bounds;
-    }
+    [SerializeField] 
+    private Vector3 randomRotationMaximal;
 
     /// <summary>
     /// Remove all children objects. Uses DestroyImmediate.
@@ -67,13 +66,12 @@ public class GenerateObjectsInArea : MonoBehaviour
     /// <returns>Returns a random position in the bounds of the area.</returns>
     private Vector3 GetRandomPositionInWorldBounds()
     {
-        var extents = _bounds.extents;
-        var center = _bounds.center;
-        return new Vector3(
-            Random.Range(-extents.x, extents.x) + center.x,
-            Random.Range(-extents.y, extents.y) + center.y,
-            Random.Range(-extents.z, extents.z) + center.z
+        var randomPoint = new Vector3(
+            Random.Range(area.bounds.min.x, area.bounds.max.x),
+            transform.position.y,
+            Random.Range(area.bounds.min.z, area.bounds.max.z)
         );
+        return randomPoint;
     }
 
     /// <summary>
